@@ -15,12 +15,9 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Services", href: "#services" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "Contact", href: "#contact" },
+    { label: "My Projects", href: "#portfolio" },
+    { label: "About Me", href: "#about" },
+    { label: "Contact me", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -43,9 +40,9 @@ const Navigation = () => {
               e.preventDefault();
               scrollToSection("#home");
             }}
-            className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+            className="text-xl font-bold text-foreground hover:text-primary transition-smooth relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:transform after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
           >
-            Afsal U
+            it's me
           </a>
 
           {/* Desktop Navigation */}
