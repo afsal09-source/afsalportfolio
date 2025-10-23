@@ -62,19 +62,27 @@ const Skills = () => {
             return (
               <Card
                 key={index}
-                className="animate-fade-in shadow-elegant hover-scale"
+                className="animate-bounce-in shadow-elegant hover-lift group overflow-hidden relative"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardHeader>
+                <div className="absolute inset-0 gradient-hero opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -top-10 -right-10 w-20 h-20 bg-primary/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+                <CardHeader className="relative z-10">
                   <CardTitle className="flex items-center gap-2">
-                    <Icon className={`h-5 w-5 ${category.color}`} />
+                    <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      <Icon className={`h-5 w-5 ${category.color}`} />
+                    </div>
                     {category.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="relative z-10">
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
-                      <Badge key={skillIndex} variant="secondary" className="transition-smooth hover:bg-primary hover:text-primary-foreground">
+                      <Badge 
+                        key={skillIndex} 
+                        variant="secondary" 
+                        className="transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:-translate-y-1"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -84,17 +92,25 @@ const Skills = () => {
             );
           })}
 
-          <Card className="animate-fade-in shadow-elegant hover-scale">
-            <CardHeader>
+          <Card className="animate-bounce-in shadow-elegant hover-lift group overflow-hidden relative" style={{ animationDelay: '0.6s' }}>
+            <div className="absolute inset-0 gradient-hero opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute -top-10 -right-10 w-20 h-20 bg-primary/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+            <CardHeader className="relative z-10">
               <CardTitle className="flex items-center gap-2">
-                <Palette className="h-5 w-5 text-primary" />
+                <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <Palette className="h-5 w-5 text-primary" />
+                </div>
                 {otherSkills.title}
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="relative z-10">
               <div className="flex flex-wrap gap-2">
                 {otherSkills.skills.map((skill, index) => (
-                  <Badge key={index} variant="secondary" className="transition-smooth hover:bg-primary hover:text-primary-foreground">
+                  <Badge 
+                    key={index} 
+                    variant="secondary" 
+                    className="transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:-translate-y-1"
+                  >
                     {skill}
                   </Badge>
                 ))}

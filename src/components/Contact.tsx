@@ -115,12 +115,13 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="space-y-6">
-            <Card className="animate-fade-in shadow-elegant">
-              <CardHeader>
+            <Card className="animate-slide-in-left shadow-elegant hover-lift group overflow-hidden border-gradient">
+              <div className="absolute top-0 right-0 w-32 h-32 gradient-glow rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <CardHeader className="relative z-10">
                 <CardTitle>Contact Information</CardTitle>
                 <CardDescription>Feel free to reach out through any of these channels</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 relative z-10">
                 {contactInfo.map((info, index) => {
                   const Icon = info.icon;
                   return (
@@ -129,13 +130,15 @@ const Contact = () => {
                       href={info.href}
                       target={info.href.startsWith("http") ? "_blank" : undefined}
                       rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-smooth group"
+                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-smooth group/item relative overflow-hidden"
+                      style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-smooth">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 translate-x-[-100%] group-hover/item:translate-x-0 transition-transform duration-300"></div>
+                      <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center group-hover/item:scale-110 group-hover/item:rotate-12 transition-all duration-300 shadow-md relative z-10">
                         <Icon className="h-5 w-5 text-white" />
                       </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">{info.label}</p>
+                      <div className="relative z-10">
+                        <p className="text-sm text-muted-foreground group-hover/item:text-primary transition-colors">{info.label}</p>
                         <p className="font-medium">{info.value}</p>
                       </div>
                     </a>
@@ -145,18 +148,20 @@ const Contact = () => {
             </Card>
           </div>
 
-          <Card className="animate-fade-in shadow-elegant">
-            <CardHeader>
+          <Card className="animate-slide-in-right shadow-elegant hover-lift group overflow-hidden border-gradient">
+            <div className="absolute bottom-0 left-0 w-32 h-32 gradient-glow rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+            <CardHeader className="relative z-10">
               <CardTitle>Send a Message</CardTitle>
               <CardDescription>I'll respond as soon as possible</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="relative z-10">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Input
                     placeholder="Your Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    className="transition-all duration-300 focus:scale-[1.02]"
                   />
                 </div>
                 <div>
@@ -165,6 +170,7 @@ const Contact = () => {
                     placeholder="Your Email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="transition-all duration-300 focus:scale-[1.02]"
                   />
                 </div>
                 <div>
@@ -173,14 +179,16 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={6}
+                    className="transition-all duration-300 focus:scale-[1.02]"
                   />
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full gradient-primary hover:opacity-90 transition-smooth"
+                  className="w-full gradient-primary hover:opacity-90 transition-smooth hover:scale-105 hover:shadow-glow relative overflow-hidden group/button"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  <span className="relative z-10">{isSubmitting ? "Sending..." : "Send Message"}</span>
+                  <div className="absolute inset-0 bg-white/20 translate-y-[100%] group-hover/button:translate-y-0 transition-transform duration-300"></div>
                 </Button>
               </form>
             </CardContent>

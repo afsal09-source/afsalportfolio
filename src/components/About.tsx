@@ -11,8 +11,9 @@ const About = () => {
         </div>
 
         <div className="max-w-4xl mx-auto space-y-8">
-          <Card className="animate-fade-in shadow-elegant hover-scale">
-            <CardContent className="pt-6">
+          <Card className="animate-slide-up shadow-elegant hover-lift border-gradient overflow-hidden group">
+            <div className="absolute inset-0 gradient-glow opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <CardContent className="pt-6 relative z-10">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Enthusiastic and detail-oriented Java Developer with a strong foundation in Core Java, OOPs concepts, 
                 and web technologies like HTML, CSS, and JavaScript. Skilled in developing and debugging Java-based 
@@ -25,10 +26,13 @@ const About = () => {
           </Card>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <Card className="animate-fade-in shadow-elegant hover-scale">
+            <Card className="animate-slide-in-left shadow-elegant hover-lift group overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 gradient-glow rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <GraduationCap className="h-6 w-6 text-primary" />
+                  <div className="p-2 rounded-lg bg-primary/10 group-hover:scale-110 transition-smooth">
+                    <GraduationCap className="h-6 w-6 text-primary" />
+                  </div>
                   Education
                 </CardTitle>
               </CardHeader>
@@ -45,10 +49,13 @@ const About = () => {
               </CardContent>
             </Card>
 
-            <Card className="animate-fade-in shadow-elegant hover-scale">
+            <Card className="animate-slide-in-right shadow-elegant hover-lift group overflow-hidden">
+              <div className="absolute top-0 left-0 w-32 h-32 gradient-glow rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Briefcase className="h-6 w-6 text-accent" />
+                  <div className="p-2 rounded-lg bg-accent/10 group-hover:scale-110 transition-smooth">
+                    <Briefcase className="h-6 w-6 text-accent" />
+                  </div>
                   Work Experience
                 </CardTitle>
               </CardHeader>

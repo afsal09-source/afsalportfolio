@@ -58,18 +58,20 @@ const Hero = () => {
               <Button
                 size="lg"
                 onClick={() => scrollToSection("portfolio")}
-                className="gradient-primary hover:opacity-90 hover:scale-105 transition-smooth shadow-elegant group"
+                className="gradient-primary hover:opacity-90 hover:scale-105 transition-smooth shadow-elegant hover:shadow-glow group relative overflow-hidden"
               >
-                View My Work 
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
+                <span className="relative z-10">View My Work</span>
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth relative z-10" />
+                <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 onClick={() => scrollToSection("contact")}
-                className="border-2 hover:border-primary hover:text-primary transition-smooth"
+                className="border-2 hover:border-primary hover:text-primary transition-smooth hover:scale-105 hover:shadow-elegant relative overflow-hidden group"
               >
-                Get In Touch
+                <span className="relative z-10">Get In Touch</span>
+                <div className="absolute inset-0 bg-primary/10 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </Button>
             </div>
             
@@ -84,10 +86,11 @@ const Hero = () => {
                   href={href}
                   target={label !== "Email" ? "_blank" : undefined}
                   rel={label !== "Email" ? "noopener noreferrer" : undefined}
-                  className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 shadow-md hover:shadow-elegant group"
+                  className="p-3 rounded-full bg-muted hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-125 hover:-translate-y-2 shadow-md hover:shadow-glow group relative overflow-hidden"
                   aria-label={label}
                 >
-                  <Icon className="h-6 w-6" />
+                  <Icon className="h-6 w-6 relative z-10 group-hover:rotate-12 transition-transform" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 </a>
               ))}
             </div>

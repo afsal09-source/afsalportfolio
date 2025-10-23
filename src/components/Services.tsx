@@ -42,16 +42,18 @@ const Services = () => {
             return (
               <Card
                 key={index}
-                className="animate-fade-in shadow-elegant hover-scale"
+                className="animate-slide-up shadow-elegant hover-lift group overflow-hidden relative border-gradient"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardHeader>
-                  <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center mb-4">
+                <div className="absolute inset-0 gradient-glow opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+                <CardHeader className="relative z-10">
+                  <div className="w-12 h-12 gradient-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-elegant group-hover:shadow-glow">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="relative z-10">
                   <CardDescription className="text-base">{service.description}</CardDescription>
                 </CardContent>
               </Card>
