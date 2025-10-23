@@ -103,24 +103,22 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-32 px-4 bg-background">
+    <section id="contact" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
-        <div className="mb-16 space-y-8">
-          <h2 className="text-4xl md:text-6xl font-bold max-w-3xl">
-            <span className="text-secondary">Say Hi!</span> and tell me about{" "}
-            <span className="text-foreground">your next project</span>
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl">
+        <div className="text-center mb-12 animate-fade-in">
+          <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
+          <div className="w-20 h-1 gradient-primary mx-auto rounded"></div>
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
             Have a project in mind or want to discuss opportunities? Feel free to reach out!
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="space-y-6">
-            <Card className="animate-fade-in shadow-elegant bg-card/50 backdrop-blur-sm border-border">
+            <Card className="animate-fade-in shadow-elegant">
               <CardHeader>
-                <CardTitle className="text-2xl">Contact Information</CardTitle>
-                <CardDescription className="text-base">Feel free to reach out through any of these channels</CardDescription>
+                <CardTitle>Contact Information</CardTitle>
+                <CardDescription>Feel free to reach out through any of these channels</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 {contactInfo.map((info, index) => {
@@ -131,14 +129,14 @@ const Contact = () => {
                       href={info.href}
                       target={info.href.startsWith("http") ? "_blank" : undefined}
                       rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted/50 transition-smooth group border border-transparent hover:border-primary/30"
+                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-smooth group"
                     >
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-smooth">
-                        <Icon className="h-6 w-6 text-primary" />
+                      <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-smooth">
+                        <Icon className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground uppercase tracking-wide">{info.label}</p>
-                        <p className="font-medium text-foreground">{info.value}</p>
+                        <p className="text-sm text-muted-foreground">{info.label}</p>
+                        <p className="font-medium">{info.value}</p>
                       </div>
                     </a>
                   );
@@ -147,19 +145,18 @@ const Contact = () => {
             </Card>
           </div>
 
-          <Card className="animate-fade-in shadow-elegant bg-card/50 backdrop-blur-sm border-border">
+          <Card className="animate-fade-in shadow-elegant">
             <CardHeader>
-              <CardTitle className="text-2xl">Send a Message</CardTitle>
-              <CardDescription className="text-base">I'll respond as soon as possible</CardDescription>
+              <CardTitle>Send a Message</CardTitle>
+              <CardDescription>I'll respond as soon as possible</CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Input
                     placeholder="Your Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="h-12 bg-background/50 border-border focus:border-primary"
                   />
                 </div>
                 <div>
@@ -168,7 +165,6 @@ const Contact = () => {
                     placeholder="Your Email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="h-12 bg-background/50 border-border focus:border-primary"
                   />
                 </div>
                 <div>
@@ -177,12 +173,11 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={6}
-                    className="bg-background/50 border-border focus:border-primary"
                   />
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full h-12 bg-secondary hover:bg-secondary/90 text-white font-semibold rounded-lg transition-smooth shadow-elegant"
+                  className="w-full gradient-primary hover:opacity-90 transition-smooth"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
