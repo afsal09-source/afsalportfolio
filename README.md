@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
+# 🌐 Afsal Portfolio Website
 
-## Project info
+Welcome to the official personal portfolio of **Afsal** — a creative and passionate individual with a drive for **Digital Marketing**, **SEO**, and **Web Development**.  
+This website showcases my skills, projects, and professional journey, built with a **modern UI** and hosted on **Vercel**.
 
-**URL**: https://lovable.dev/projects/90f3e3b7-bac6-40ec-93d9-e3dd4b0a336d
+🔗 **Live Website:** [https://afsalportfolio-sigma.vercel.app/](https://afsalportfolio-sigma.vercel.app/)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🧑‍💻 About Me
 
-**Use Lovable**
+Hi, I’m **Afsal**, a passionate and creative individual seeking an entry-level role in **Digital Marketing** to utilize my skills in **SEO**, **social media marketing**, and **analytics** to drive digital growth and enhance brand visibility.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/90f3e3b7-bac6-40ec-93d9-e3dd4b0a336d) and start prompting.
+I enjoy combining my marketing and tech knowledge to build digital experiences that are both functional and impactful.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🚀 Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- 💼 Professional portfolio design  
+- 🧾 About, Skills, Projects, and Contact sections  
+- 📱 Fully responsive for mobile and desktop  
+- 🌈 Clean, modern UI and smooth animations  
+- 🔗 Integrated social and professional links  
+- ⚡ Fast hosting and deployment via **Vercel**  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🛠️ Tech Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+| Category | Technologies |
+|-----------|---------------|
+| **Frontend** | React.js, HTML5, CSS3, JavaScript |
+| **UI Styling** | Tailwind CSS / Modern Responsive Layout |
+| **Hosting** | Vercel |
+| **Version Control** | Git & GitHub |
+| **Design Approach** | Mobile-first, clean and minimal design |
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🧩 Sections Overview
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- **Home:** Quick introduction and tagline  
+- **About:** My personal background and skills summary  
+- **Projects:** Showcases of my works and experiences  
+- **Contact:** Links to reach me via email or social profiles  
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ⚙️ Local Setup & Installation
 
-**Use GitHub Codespaces**
+To run this portfolio locally on your system:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/90f3e3b7-bac6-40ec-93d9-e3dd4b0a336d) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/afsal09-source/afsalportfolio.git
