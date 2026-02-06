@@ -36,7 +36,7 @@ const Hero = () => {
             </div>
             
             <div className="space-y-3">
-              {["Java Developer", "Full-Stack Enthusiast", "Digital Marketing Strategist"].map((role, index) => (
+              {["Java Developer", "Full-Stack Enthusiast", "Cloud Engineer", "Digital Marketing Strategist"].map((role, index) => (
                 <div
                   key={role}
                   className="flex items-center gap-3 group"
