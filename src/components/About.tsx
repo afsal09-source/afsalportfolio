@@ -17,9 +17,11 @@ const About = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Enthusiastic and detail-oriented Java Developer with a strong foundation in Core Java, OOPs concepts, 
                 and web technologies like HTML, CSS, and JavaScript. Skilled in developing and debugging Java-based 
-                applications using tools such as Eclipse and IntelliJ IDEA. A passionate and creative individual seeking 
-                an entry-level role in Digital Marketing to utilize my skills in SEO, social media marketing, and analytics 
-                to drive digital growth and enhance brand visibility. Eager to apply technical skills and problem-solving 
+                applications using tools such as Eclipse and IntelliJ IDEA. Passionate about Cloud Engineering with 
+                hands-on experience in cloud platforms like AWS and Azure, including services such as EC2, S3, Lambda, 
+                and cloud infrastructure management. A creative individual seeking roles in Cloud Engineering and Digital 
+                Marketing to utilize my skills in cloud solutions, SEO, social media marketing, and analytics to drive 
+                digital growth and enhance brand visibility. Eager to apply technical skills and problem-solving 
                 abilities to contribute to innovative software solutions in a dynamic development environment.
               </p>
             </CardContent>
