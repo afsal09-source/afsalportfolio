@@ -1,19 +1,19 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Film, CreditCard, Globe } from "lucide-react";
+import { CreditCard, Globe, BarChart3 } from "lucide-react";
 const Portfolio = () => {
   const projects = [{
-    icon: Film,
-    title: "Movie Ticket Booking Website",
-    description: "A frontend-based movie ticket booking system with interactive UI for browsing movies, selecting seats, and booking tickets.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    highlights: ["Responsive Design", "Interactive Seat Selection", "User-Friendly Interface"]
-  }, {
     icon: CreditCard,
     title: "ATM Simulation System",
     description: "Full-stack Java application simulating ATM operations including balance inquiry, cash withdrawal, deposit, and PIN authentication.",
     technologies: ["Java", "SQL", "Full-Stack"],
     highlights: ["Secure Authentication", "Transaction Management", "Database Integration"]
+  }, {
+    icon: BarChart3,
+    title: "Placement Analytics & Feedback Management System",
+    description: "Java full-stack web application for managing student placement records, analytics dashboards, and collecting feedback from students and recruiters.",
+    technologies: ["Java", "Spring Boot", "MySQL", "REST API", "Thymeleaf"],
+    highlights: ["Placement Analytics Dashboard", "Feedback Collection Module", "Role-Based Access Control"]
   }, {
     icon: Globe,
     title: "Portfolio Website",
