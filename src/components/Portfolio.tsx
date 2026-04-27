@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Film, CreditCard, Globe, TrendingUp } from "lucide-react";
+import { Film, CreditCard, Globe } from "lucide-react";
 const Portfolio = () => {
   const projects = [{
     icon: Film,
@@ -20,18 +20,6 @@ const Portfolio = () => {
     description: "Modern, responsive portfolio website built with React.js showcasing projects, skills, and professional experience.",
     technologies: ["React.js", "TypeScript", "Tailwind CSS"],
     highlights: ["Responsive Design", "Interactive Components", "Smooth Animations"]
-  }, {
-    icon: TrendingUp,
-    title: "Digital Marketing for Coffee Shop",
-    description: "Comprehensive digital marketing strategy that boosted local brand awareness by 30% through social media campaigns and content design.",
-    technologies: ["Social Media Marketing", "Canva", "Facebook Ads", "Instagram"],
-    highlights: ["30% Brand Awareness Increase", "Social Media Growth", "Content Creation"]
-  }, {
-    icon: TrendingUp,
-    title: "Digital Marketing for Recruitment",
-    description: "Strategic digital marketing campaign designed to enhance recruitment efforts and attract qualified candidates.",
-    technologies: ["SEO", "SEM", "Google Ads", "LinkedIn Marketing"],
-    highlights: ["Lead Generation", "Targeted Campaigns", "Analytics-Driven"]
   }];
   return <section id="portfolio" className="py-20 px-4">
       <div className="container mx-auto">
@@ -39,7 +27,7 @@ const Portfolio = () => {
           <h2 className="text-4xl font-bold mb-4">Projects</h2>
           <div className="w-20 h-1 gradient-primary mx-auto rounded"></div>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            A showcase of my development projects and digital marketing campaigns
+            A showcase of my development projects
           </p>
         </div>
 
