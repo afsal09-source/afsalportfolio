@@ -29,12 +29,6 @@ const Skills = () => {
       color: "text-accent",
     },
     {
-      title: "Digital Marketing",
-      icon: TrendingUp,
-      skills: ["SEO", "SEM", "Google Ads", "Social Media Marketing", "Facebook Ads"],
-      color: "text-primary",
-    },
-    {
       title: "Design & Soft Skills",
       icon: MessageCircle,
       skills: ["Canva Designing", "Adaptability", "Good Communication", "Problem Solving"],
