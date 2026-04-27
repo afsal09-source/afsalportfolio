@@ -36,7 +36,7 @@ const Hero = () => {
             </div>
             
             <div className="space-y-3">
-              {["Java Developer", "Full-Stack Enthusiast", "Cloud Engineer", "Digital Marketing Strategist"].map((role, index) => (
+              {["Java Developer", "Full-Stack Enthusiast", "Cloud Engineer"].map((role, index) => (
                 <div
                   key={role}
                   className="flex items-center gap-3 group"
@@ -112,7 +112,7 @@ const Hero = () => {
               <div className="relative animate-float">
                 <img
                   src={profileImage}
-                  alt="Afsal U - Java Developer and Digital Marketing Strategist"
+                  alt="Afsal U - Java Developer and Cloud Engineer"
                   className="relative rounded-full w-80 h-80 md:w-96 md:h-96 object-cover shadow-glow border-4 border-background ring-2 ring-primary/50"
                 />
               </div>
